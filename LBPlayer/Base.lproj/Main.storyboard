@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4lb-ck-UFu" customClass="LBPlayerView">
+                                <rect key="frame" x="-1" y="229" width="376" height="210"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="QR2-Yk-J7r"/>
+                                    <constraint firstAttribute="width" secondItem="4lb-ck-UFu" secondAttribute="height" multiplier="16:9" id="UOO-gG-l5J"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="QR2-Yk-J7r"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4lb-ck-UFu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2zb-EY-Dsl"/>
+                            <constraint firstItem="4lb-ck-UFu" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="RaX-mu-5TY"/>
+                            <constraint firstItem="4lb-ck-UFu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bmK-wb-WhP"/>
+                            <constraint firstItem="4lb-ck-UFu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gWv-Tm-HZY"/>
+                            <constraint firstAttribute="trailing" secondItem="4lb-ck-UFu" secondAttribute="trailing" id="vB9-yc-c4M"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="bmK-wb-WhP"/>
+                                <exclude reference="vB9-yc-c4M"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="playerView" destination="4lb-ck-UFu" id="cM5-PJ-ACl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
